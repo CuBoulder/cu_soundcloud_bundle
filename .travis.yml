@@ -21,7 +21,7 @@ mysql:
   username: root
   encoding: utf8
 
-# Cache Composer and db export.
+# Cache Composer and database export.
 # I removed caching of Drush since you have to clear Drush cache to get new Drupal versions.
 cache:
   directories:
