@@ -8,7 +8,6 @@
 // Our dialog definition.
 CKEDITOR.dialog.add( 'soundcloud_embedDialog', function( editor ) {
 
-
 	return {
 
 		// Basic properties of the dialog window: title, minimum size.
@@ -25,20 +24,16 @@ CKEDITOR.dialog.add( 'soundcloud_embedDialog', function( editor ) {
 
 				// The tab contents.
 				elements: [
-
 					{
-					// Text input for video url.
+					  // Text input for video url.
 						type: 'textarea',
 						id: 'soundcloud-embed',
 						label: 'Soundcloud Embed Code',
 						// Validation checking whether the field is not empty.
-						validate: CKEDITOR.dialog.validate.notEmpty( "Soundcloud Embed Code field cannot be empty" )
-					},
-
-
+						validate: CKEDITOR.dialog.validate.notEmpty("Soundcloud Embed Code field cannot be empty")
+					}
 				]
-			},
-
+			}
 		],
 
 		// This method is invoked once a user clicks the OK button, confirming the dialog.
@@ -48,14 +43,13 @@ CKEDITOR.dialog.add( 'soundcloud_embedDialog', function( editor ) {
 			// http://docs.ckeditor.com/#!/api/CKEDITOR.dialog
 			var dialog = this;
 
-			// Get Fields
+			// Get Fields.
 			var embedCode = dialog.getValueOf( 'tab-settings', 'soundcloud-embed' );
 
       embedCode = embedCode.replace('</iframe>', '[/soundcloud]');
       embedCode = embedCode.replace('iframe', 'soundcloud');
       embedCode = embedCode.replace('<', '[');
       embedCode = embedCode.replace('>', ']');
-      alert(embedCode);
 
 			editor.insertHtml(embedCode);
 		}

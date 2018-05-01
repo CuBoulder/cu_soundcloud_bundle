@@ -1,0 +1,6 @@
+<?php
+
+/**
+ * @file
+ * Contins the Drupal hooks for the cu_soundcloud_bundle module.
+ */

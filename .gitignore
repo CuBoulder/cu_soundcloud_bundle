@@ -1,0 +1,11 @@
+# Mac OS files
+*.DS_Store
+
+# IntelliJ files
+*.idea
+
+# Ignore things if I run Behat outside of VM
+tests/behat/behat.local.yml
+vendor*
+bin*
+composer.lock
