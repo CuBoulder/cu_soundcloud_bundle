@@ -33,10 +33,11 @@ function cu_soundcloud_embed_shortcode_info() {
       'scrolling' => 'no',
       'frameborder' => 'no',
       'src' => '',
+      'id' => '',
     ), $attrs));
     // Check to make sure the src is soundcloud.com
     if (strpos($src, 'soundcloud.com') !== false) {
-      $output = '<iframe class="soundcloud-shortcode-embed" width="' . $width . '" height="' . $height . '" scrolling="' . $scrolling . '" frameborder="' . $frameborder . '" src="' . $src . '"></iframe>';
+      $output = '<iframe id="' . $id . '" width="' . $width . '" height="' . $height . '" scrolling="' . $scrolling . '" frameborder="' . $frameborder . '" src="' . $src . '"></iframe>';
       return $output;
     }
 
